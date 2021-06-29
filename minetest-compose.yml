@@ -7,9 +7,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/New_York
-      - CLI_ARGS="--gameid minetest" #optional
     volumes:
-      - ${HOME}/config/.minetest
+      - minetest:/config/.minetest
     ports:
       - 30000:30000/udp
     restart: unless-stopped
