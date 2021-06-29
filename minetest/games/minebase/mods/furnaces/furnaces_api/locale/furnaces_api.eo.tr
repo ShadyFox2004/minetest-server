@@ -1,0 +1,6 @@
+# textdomain: furnaces_api
+100% (output full)=100% (eligo estas plena)
+@1%=@1%
+Empty=Malplena
+Not cookable=Ne povas kuiri
+(Item: @1; Fuel: @2)=(Objekto: @1; Brulaĵo: @2)

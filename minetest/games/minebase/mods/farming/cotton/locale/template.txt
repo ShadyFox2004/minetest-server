@@ -1,0 +1,5 @@
+# textdomain: cotton
+Wild Cotton=
+Cotton Seed=
+Cotton=
+String=

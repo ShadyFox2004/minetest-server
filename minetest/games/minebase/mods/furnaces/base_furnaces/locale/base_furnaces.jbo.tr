@@ -1,0 +1,4 @@
+# textdomain: base_furnaces
+Furnace active=.i lo toknu cu tolcando
+Furnace inactive=.i lo toknu cu cando
+Furnace=lo toknu

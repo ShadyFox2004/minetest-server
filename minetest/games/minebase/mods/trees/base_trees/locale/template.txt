@@ -1,0 +1,25 @@
+# textdomain: base_trees
+Apple Tree=
+Apple Wood Planks=
+Apple Tree Sapling=
+Apple Tree Leaves=
+Apple=
+Apple Marker=
+Jungle Tree=
+Jungle Wood Planks=
+Jungle Tree Leaves=
+Jungle Tree Sapling=
+Emergent Jungle Tree Sapling=
+Pine Tree=
+Pine Wood Planks=
+Pine Needles=
+Pine Tree Sapling=
+Acacia Tree=
+Acacia Wood Planks=
+Acacia Tree Leaves=
+Acacia Tree Sapling=
+Aspen Tree=
+Aspen Wood Planks=
+Aspen Tree Leaves=
+Aspen Tree Sapling=
+Stick=

@@ -1,0 +1,6 @@
+# textdomain: beds_api
+Leave Bed=
+Good morning.=
+@1 of @2 players are in bed=
+Force night skip=
+You can only sleep at night.=

@@ -1,0 +1,3 @@
+# textdomain: doors_api
+Hidden Door Segment=
+Owned by @1=

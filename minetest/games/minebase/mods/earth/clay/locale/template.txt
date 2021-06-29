@@ -1,0 +1,5 @@
+# textdomain: clay
+Clay=
+Brick Block=
+Clay Brick=
+Clay Lump=

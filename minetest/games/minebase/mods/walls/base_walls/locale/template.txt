@@ -1,0 +1,3 @@
+# textdomain: base_walls
+Cobblestone Wall=
+Desert Cobblestone Wall=

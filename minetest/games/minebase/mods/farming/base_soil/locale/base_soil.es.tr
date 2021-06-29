@@ -1,0 +1,7 @@
+# textdomain: base_soil
+Soil=Tierra de cultivo
+Wet Soil=Tierra de cultivo humeda
+Dry Soil=Tierra de cultivo seca
+Wet Dry Soil=Tierra de cultivo seca-humeda
+Desert Sand Soil=Tierra de cultivo de arena de desierto
+Wet Desert Sand Soil=Tierra de cultivo de arena de desierto humeda

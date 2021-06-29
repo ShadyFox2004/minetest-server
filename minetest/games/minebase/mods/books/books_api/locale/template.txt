@@ -1,0 +1,7 @@
+# textdomain: books_api
+Title:=
+Contents:=
+Save=
+by @1=
+Page @1 of @2=
+"@1" by @2=

@@ -1,0 +1,4 @@
+# textdomain: base_furnaces
+Furnace active=熔爐正在運轉
+Furnace inactive=熔爐未使用
+Furnace=熔爐

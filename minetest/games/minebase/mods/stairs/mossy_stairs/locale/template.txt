@@ -1,0 +1,11 @@
+# textdomain: mossy_stairs
+Mossy Cobblestone Stair=
+Inner Mossy Cobblestone Stair=
+Outer Mossy Cobblestone Stair=
+Mossy Cobblestone Slab=
+Mossy Cobblestone Step=
+Inner Mossy Cobblestone Step=
+Outer Mossy Cobblestone Step=
+Mossy Cobblestone Steps=
+Mossy Cobblestone Steps Half=
+Mossy Cobblestone Steps Slab=

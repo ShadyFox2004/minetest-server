@@ -1,0 +1,5 @@
+# textdomain: base_doors
+Wooden Door=
+Steel Door=
+Glass Door=
+Obsidian Glass Door=

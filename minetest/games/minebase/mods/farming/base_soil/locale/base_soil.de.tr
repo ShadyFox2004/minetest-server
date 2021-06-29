@@ -1,0 +1,7 @@
+# textdomain: base_soil
+Soil=Ackerboden
+Wet Soil=Nasser Ackerboden
+Dry Soil=Savannenackerboden
+Wet Dry Soil=Nasser Savannenackerboden
+Desert Sand Soil=Wüstensandackerboden
+Wet Desert Sand Soil=Nasser Wüstensandackerboden

@@ -1,0 +1,3 @@
+# textdomain: base_trapdoors
+Wooden Trapdoor=
+Steel Trapdoor=

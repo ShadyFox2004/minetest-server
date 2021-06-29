@@ -1,0 +1,3 @@
+# textdomain: base_carts
+Cart=
+aux + left-click to pick up=

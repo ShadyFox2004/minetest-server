@@ -1,0 +1,7 @@
+# textdomain: base_soil
+Soil=Tero
+Wet Soil=Malseka Tero
+Dry Soil=Savana Tero
+Wet Dry Soil=Malseka Savana Tero
+Desert Sand Soil=Dezerta Sablo Tero
+Wet Desert Sand Soil=Malseka Dezerta Sablo Tero

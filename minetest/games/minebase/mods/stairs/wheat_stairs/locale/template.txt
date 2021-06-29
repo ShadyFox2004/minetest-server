@@ -1,0 +1,11 @@
+# textdomain: wheat_stairs
+Straw Stair=
+Inner Straw Stair=
+Outer Straw Stair=
+Straw Slab=
+Straw Step=
+Inner Straw Step=
+Outer Straw Step=
+Straw Steps=
+Straw Steps Half=
+Straw Steps Slab=

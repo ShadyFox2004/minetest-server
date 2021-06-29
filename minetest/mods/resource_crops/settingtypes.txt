@@ -1,0 +1,93 @@
+### MISC
+
+
+# Enables elemental crops.
+resourcecrops_elements (elements) bool true
+
+# Enables essence ore.
+resourcecrops_essence_ore (essence ore) bool true
+
+# Enables the essence harvester.
+resourcecrops_essence_harvester (essence harvester) bool true
+
+# Enables harvesting a crop by punching it.
+resourcecrops_punch_harvest (punch to harvest) bool true
+
+# The time between each possible crop growth.
+# NOTE: Should be a positive integer number of seconds.
+resourcecrops_growth_interval (growth interval) int 10
+
+# The chance a crop will grow after each interval.
+# NOTE: A crop's chance to grow is 1 out of this number.
+resourcecrops_growth_chance (growth chance) int 4
+
+
+### DEFAULT CROPS
+
+
+# Enables coal crops.
+resourcecrops_crop_coal (coal crop) bool true
+
+# Enables tin crops.
+resourcecrops_crop_tin (tin crop) bool true
+
+# Enables copper crops.
+resourcecrops_crop_copper (copper crop) bool true
+
+# Enables iron crops.
+resourcecrops_crop_iron (iron crop) bool true
+
+# Enables gold crops.
+resourcecrops_crop_gold (gold crop) bool true
+
+# Enables diamond crops.
+resourcecrops_crop_diamond (diamond crop) bool true
+
+# Enables mese crops.
+resourcecrops_crop_mese (mese crop) bool true
+
+
+### MOREORES CROPS
+
+
+# Enables silver crops, requires the moreores mod.
+resourcecrops_crop_silver (moreores silver crop) bool true
+
+# Enables mithril crops, requires the moreores mod.
+resourcecrops_crop_mithril (moreores mithril crop) bool true
+
+
+### TECHNIC CROPS
+
+
+# Enables brass crops, requires the technic modpack.
+resourcecrops_crop_brass (technic brass crop) bool true
+
+# Enables cast iron crops, requires the technic modpack.
+resourcecrops_crop_cast_iron (technic cast iron crop) bool true
+
+# Enables carbon steel crops, requires the technic modpack.
+resourcecrops_crop_carbon_steel (technic carbon steel crop) bool true
+
+# Enables chromium crops, requires the technic modpack.
+resourcecrops_crop_chromium (technic chromium crop) bool true
+
+# Enables lead crops, requires the technic modpack.
+resourcecrops_crop_lead (technic lead crop) bool true
+
+# Enables sulfur crops, requires the technic modpack.
+resourcecrops_crop_sulfur (technic sulfur crop) bool true
+
+# Enables uranium crops, requires the technic modpack.
+resourcecrops_crop_uranium (technic uranium crop) bool true
+
+# Enables zinc crops, requires the technic modpack.
+resourcecrops_crop_zinc (technic zinc crop) bool true
+
+# Enables rubber crops, requires the technic modpack.
+resourcecrops_crop_rubber (technic rubber crop) bool true
+
+### TERUMET CROPS
+
+# Enables terumetal crops, requires the terumet mod.
+resourcecrops_crop_terumetal (terumet terumetal crop) bool true

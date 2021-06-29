@@ -1,0 +1,857 @@
+# Functions --------------------------------------------------------------------
+dc	dependently calculating
+ic	independently calculating
+m	manipulating
+mc	manipulating and calculating
+r	reading from filesystem
+w	writing to filesystem
+
+## __builtin -------------------------------------------------------------------
+__builtin/init.lua
+  local item
+    .set_item,				m
+    .burn_up,				m
+    .on_step,				m
+
+## Beds ------------------------------------------------------------------------
+beds/beds_api/api.lua
+  beds
+    .get_other_pos,			dc
+    .destruct_bed,			m
+    .on_place,				mc
+    .on_rotate,				mc
+    .register_bed,			m
+  local
+    on_rightclick,			mc
+    can_dig,				dc
+    top_can_dig,			dc
+
+beds/beds_api/functions.lua 
+  beds
+    .check_in_beds,			dc
+    .lay_down,				m
+    .get_player_in_bed_count,		dc
+    .kick_players,			m
+    .skip_night,			m
+    .on_rightclick,			m
+    .can_dig,				dc
+  local
+    get_look_yaw,			dc
+    is_night_skip_enabled,		dc
+    update_formspecs,			m
+  callbacks
+    on_respawnplayer,			mc
+    on_leaveplayer,			m
+    on_dieplayer,			m
+    on_player_receive_fields,		m
+
+beds/beds_api/spawn.lua
+  beds
+    .set_spawns,			m
+    .remove_spawns_at,			m
+  local
+    read_spawns,			m
+
+## Biomes ----------------------------------------------------------------------
+biomes/biomes_api/init.lua
+  biomes
+    .define_default,			m
+    .register_biome,			m
+    .register_ocean,			m
+    .register_under,			m
+    .register_biome_set,		m
+    .register_stratum,			m
+
+## Books -----------------------------------------------------------------------
+books/books_api/init.lua
+  books
+    .get_lines,				ic
+    .page_content,			dc
+    .create_formspec,			ic
+    .on_use,				mc
+    .turn_page,				ic
+    .register_book,			m
+    .register_book_set,			m
+  callbacks
+    on_craft,				m
+    on_player_receive_fields,		m
+
+## Buckets ---------------------------------------------------------------------
+buckets/buckets_api/init.lua
+  buckets
+    .on_place,				mc
+    .on_use,				m
+    .register_liquid,			m
+  local
+    check_protection,			mc
+
+## Carts -----------------------------------------------------------------------
+carts/carts_api/init.lua
+  carts
+    .get_sign,				ic
+    .velocity_to_dir,			ic
+    .is_rail,				dc
+    .check_front_up_down,		dc
+    .get_rail_direction,		dc
+    .pathfinder,			dc
+    .get_rail_groups,			dc
+    .rail_sound,			m
+    .rail_on_step,			m
+    .on_step,				m
+    .on_activate,			m
+    .get_staticdata,			ic
+    .on_punch,				m
+    .craftitem_on_place,		m
+    .register_rail,			m
+    .register_entity,			m
+    .register_craftitem,		m
+    .register_cart,			m
+  local
+    get_railparams,			dc
+    rail_on_step_event,			-
+    determineYaw,			ic
+
+## Containers ------------------------------------------------------------------
+  containers
+    .create_formspec,			ic
+    .lid_obstructed,			dc
+    .close,				mc
+    .on_metadata_inventory_move,	m
+    .on_metadata_inventory_put,		m
+    .on_metadata_inventory_take,	m
+    .register_container,		m
+    .unprotected
+      .on_construct,			m
+      .can_dig,				dc
+      .on_rightclick,			m
+      .on_blast,			mc
+      .allow_metadata_inventory_put,	dc
+    .protected
+      .on_construct,			m
+      .after_place_node,		m
+      .can_dig,				dc
+      .on_rightclick,			m
+      .on_blast,			ic
+      .allow_metadata_inventory_move,	mc
+      .allow_metadata_inventory_put,	mc
+      .allow_metadata_inventory_take,	mc
+      .on_key_use,			m
+      .on_skeleton_key_use,		m
+  open
+    .can_dig,				ic
+    .on_blast,				ic
+  local
+    create_overlay,			ic
+    determine_opening_pos,		ic
+    register_container,			m
+    register_container_opened,		m
+  callbacks
+    on_player_receive_fields,		mc
+    on_leaveplayer,			m
+
+containers/bones/init.lua
+  local 
+    is_owner,				dc
+    may_replace,			dc
+    drop,				m
+    move_items,				m
+    bones_time,				m
+  callbacks
+    on_punch,				m
+    on_timer,				m
+    on_dieplayer,			m
+
+containers/shelves/init.lua
+  local
+    update_bookshelf,			m
+    update_vessels_shelf,		m
+
+containers/trash/init.lua
+  callbacks
+    .on_player_receive_fields,		m
+
+## Craft ------------------------------------------------------------------------
+craft/init.lua
+  craft
+    .register_craft14,			m
+    .register_craft44,			m
+    .register_craft19,			m
+    .register_craft99,			m
+    .register_craft_metadata_copy,	m
+    .horizontal_half,			m
+    .side_by_side,			m
+    .stacked,				m
+
+## Creative --------------------------------------------------------------------
+creative/init.lua
+  minetest
+    .handle_node_drops,			m
+    .is_enabled,			dc
+  creative
+    .old_is_creative_enabled		-
+    .old_handle_node_drops,		m
+    .is_enabled_for,			dc
+  local
+    update_sfinv,			m
+  callbacks
+    on_placenode,			dc
+
+creative/inventory.lua
+  creative
+    .init_creative_inventory,		dc
+    .match,				dc
+    .description,			dc
+    .update_creative_inventory,		m
+    .register_tab,			m
+    .get_homepage_name,			dc
+  detached
+    .allow_move,			dc
+    .allow_put,				ic
+    .allow_take,			dc
+    .on_move,				ic
+  tab
+    .is_in_nav,			-
+    .get,				m
+    .on_player_receive_fields,		m
+  local
+    init_creative_cache,		m
+  detached_inventory "creative_trash"
+    allow_put,				ic
+    on_put,				m
+  callbacks
+    on_mods_loaded,			m
+
+## Doors -----------------------------------------------------------------------
+doors/doors_api/init.lua
+  doors_get
+    .door_open,				mc
+    .door_close,			mc
+    .door_toggle,			mc
+    .door_state,			dc
+    .trapdoor_open,			mc
+    .trapdoor_close,			mc
+    .trapdoor_toggle,			mc
+    .trapdoor_state,			dc
+  doors
+    .door_toggle,			mc
+    .trapdoor_toggle,			mc
+    .get,				dc
+    .register,				
+    .on_place,				mc
+    .on_rightclick,			m
+    .after_dig_node,			m
+    .on_rotate,				ic
+    .protected_on_blast,		ic
+    .on_key_use,			m
+    .on_skeleton_key_use,		m
+    .on_blast,				m
+    .on_destruct,			m
+    .register_craftitem,		m
+    .register_door,			m
+    .register,				m
+    .trapdoor_toggle,			m
+    .trapdoor_on_rightclick,		m
+    .trapdoor_after_place_node,		m
+    .trapdoor_on_blast,			m
+    .register_trapdoor,			m
+  local
+    replace_old_owner_information,	m
+    on_place_node,			-
+    can_dig_door,			dc
+    register_trapdoor,			m
+
+## Dungeon Loot ----------------------------------------------------------------
+dungeon_loot/dungeon_loot_api/init.lua
+  dungeon_loot
+    .register,				m
+    .get_loot,				dc
+
+dungeon_loot/dungeon_loot_api/mapgen/init.lua
+  dungeon_loot
+    .find_walls,			dc
+    .populate_chest,			m
+    .filter_rooms,			dc
+  local 
+    is_wall,				ic
+  callbacks
+    on_generated,			m
+
+## Dye -------------------------------------------------------------------------
+
+## Earth -----------------------------------------------------------------------
+earth/base_earth/init.lua
+  abm ("Grass spread"),			m
+  abm ("Grass covered"),		m
+
+earth/earth_api/init.lua
+ earth
+   .define_defaults,			m
+   .register_stone,			m
+   .register_brick,			m
+   .register_block,			m
+   .register_cobble,			m
+   .register_stone_nodes,		m
+   .register_sand,			m
+   .register_ore,			m
+   .register_sand_nodes,		m
+   .register_node_with,			m
+   .register_deco,			m
+   .register_nodes_with,		m
+
+earth/mossy/init.lua
+  mossy
+    .replace,				m
+    .register_growth,			m
+
+## Env Sounds ------------------------------------------------------------------
+  env_sounds
+    .register_sound,			m
+    .update_sound,			m
+    .cyclic_update,			m
+  callbacks
+    on_Joinplayer,			m
+
+## Farming ---------------------------------------------------------------------
+farming/base_soil/init.lua
+  abm ("Farming Soil"),			m
+
+farming/farming_api/init.lua
+  farming
+    .hoe_on_use,			m
+    .register_hoe,			m
+    .tick,				m
+    .place_seed,			m
+    .register_plant,			m
+    .grow_plant,			m
+    .on_place_seed,			m
+    .register_seed,			m
+    .register_harvest,			m
+    .register_plant_steps,		m
+    .register_plant,			m
+  local
+    lbm_nodes_fu,			m
+
+## Fences ----------------------------------------------------------------------
+fences/fences_api/init.lua
+  fences
+    .register_post,			m
+    .register_rail,			m
+    .register_mesepost,			m
+    .register_gate,			m
+    .register_fence,			m
+  local
+    register_gate,			m
+
+## Fire ------------------------------------------------------------------------
+fire/base_fire/init.lua
+  fire
+    .flame_on_timer,			m
+    .on_use_lighter,			m
+  callbacks
+    "base_fireflame"
+      on_construct,			m
+    "base_ores:coal_block"
+      after_destruct,			m
+      on_ignite,			m
+
+fire/fire_api/init.lua
+  fire
+    .flood_flame,			mc
+    .remove_flammable,			m
+    .register_node,			m
+    .update_sounds_around,		-
+  abm ("Ignite flame"),			m
+
+## Flowers ---------------------------------------------------------------------
+flowers/flowers_api/init.lua
+  flowers
+    .register_decoration,		m
+    .register_flower,			m
+    .flower_spread,			m
+    .register_mushroom,			m
+    .mushroom_spread,			m
+    .on_place_waterlily,		m
+    .register_waterlily,		m
+
+## Formspecs -------------------------------------------------------------------
+formspecs/init.lua
+  formspecs
+    .create_listcolors,			dc
+    .create_rect_button_style,		dc
+    .create_prepend,			dc
+    .get_hotbar_bg,			ic
+  callbacks
+    on_joinplayer,			m
+
+## Furnaces --------------------------------------------------------------------
+furnaces/furnaces_api/init.lua
+  furnaces
+    .register_furnace,			m
+    .get_active_formspec,		ic
+    .can_dig,				dc
+    .allow_metadata_inventory_put,	mc
+    .allow_metadata_inventory_move,	mc
+    .allow_metadata_inventory_take,	dc
+    .on_construct,			m
+    .on_metadata_inventory_move,	m
+    .on_metadata_inventory_put,		m
+    .on_metadata_inventory,		m
+    .on_blast,				m
+    .swap_node,				m
+    .node_timer,
+  local 
+    register_furnace,			m
+
+## Glass -----------------------------------------------------------------------
+glass/glass_api/init.lua
+  glass
+    .register_glass			m
+
+## Grasses ---------------------------------------------------------------------
+grasses/base_grasses/init.lua
+  local
+    register_grass_decoration,		m
+    register_dry_grass_decoration,	m
+    register_fern_decoration,		m
+    grow_papyrus,			m
+  callbacks
+    after_dig_node,			m
+
+grasses/grasses_api/init.lua
+  grasses
+    .on_place,				m
+    .register_grass,			m
+    .register_decoration,		m
+    .register_grass_set,		m
+    .dig_up,				m
+
+## Hydrophytes -----------------------------------------------------------------
+hydrophytes/hydrophytes_api/init.lua
+  hydrophytes
+    .on_place,				m
+    .after_destruct,			m
+    .register_phyte,			m
+    .register_coral,			m
+    .register_decoration,		m
+    .register_phyte_set,		m
+
+## Initial Stuff ---------------------------------------------------------------
+initial_stuff/initial_stuff_api/init.lua
+  initial_stuff
+    .give,				m
+    .add,				m
+    .clear,				m
+    .add_from_csv,			m
+
+## Killme ----------------------------------------------------------------------
+killme/init.lua
+  command "killme",			m
+
+## Ladders ---------------------------------------------------------------------
+ladders/ladders_api/init.lua
+  ladders
+    .register_ladder,			m
+
+## Lights ----------------------------------------------------------------------
+lights/torches/init.lua
+  callback
+    on_place,				m
+
+lights/lights_api/init.lua
+  lights
+    .on_flood,				m
+    .register_torch_floor,		m
+    .register_torch_wall,		m
+    .register_torch_ceiling,		m
+    .register_torch,			m
+  local
+    register_torch,			m
+
+## Liquids ---------------------------------------------------------------------
+liquids/base_liquids/init.lua
+  local
+    cool_lava,				m
+  callback
+    on_construct "base_liquids:snow,	m
+    on_construct "base_liquids:snow_block"	m
+
+liquids/liquids_api/init.lua
+  liquids
+    .register_liquid_node,		m
+    .register_liquid,			m
+
+## Magnifiers ------------------------------------------------------------------
+magnifiers/magnifiers_api/init.lua
+  magnifiers
+    .update_fov,			m
+    .update_player_property,		m
+    .register_magnifier,		m
+  callbacks
+    on_joinplayer,			m
+
+## Maps ------------------------------------------------------------------------
+maps/init.lua
+  maps
+    .update_hud_flags,			m
+  local
+    cyclic_update,			m
+  callbacks
+    on_joinplayer,			m
+    on_use,				m
+
+## Mounts ----------------------------------------------------------------------
+mounts/mounts_api/init.lua
+  mounts
+    .get_velocity,			ic
+    .drive,				m
+    .on_rightclick,			m
+    .on_activate,			m
+    .get_staticdata,			ic
+    .on_punch,				m
+    .on_step,				m
+    .register_entity,			m
+    .on_place,				m
+    .register_craftitem,		m
+    .register_mount,			m
+  local
+    node_is,				dc
+    get_sign,				ic
+    get_v,				ic
+    after_crash,			m
+    after_punch,			m
+    
+## Ores ------------------------------------------------------------------------
+ores/ores_api/init.lua
+  ores
+    .register_lump,			m
+    .register_ingot,			m
+    .register_mineral,			m
+    .register_block,			m
+    .register_ore,			m
+    .register_blob_ores,		m
+    .register_scatter_ores,		m
+    .register_metal,			m
+    .register_crystal_item,		m
+    .register_fragment,			m
+    .register_crystal,			m
+  local
+    calc_ore_values,			ic
+
+## Permissions -----------------------------------------------------------------
+permissions/base_permissions/init.lua
+  callbacks
+    on_place "key",			mc
+    on_use "skeleton_key",		mc
+
+permissions/permissions_api/init.lua
+  permissions
+    .generate_secret,			dc
+    .create_key,			mc
+    .correct_key,			mc
+    .can_interact_with_node,		mc
+
+## Players ---------------------------------------------------------------------
+players/base_players/init.lua
+  callbacks
+    on_joinplayer,			m
+
+players/players_api/init.lua
+  players
+    .register_model,			m
+    .get_animation,			m
+    .set_model,				m
+    .set_textures,			m
+    .set_animation,			m
+    .calculate_knockback,		dc
+ callbacks
+   on_leaveplayer,			m
+   globalstep,				m
+
+## Pterygota -------------------------------------------------------------------
+pterygota/fireflies/init.lua
+  callbacks
+    on_rightclick,			m
+
+pterygota/pterygota_api/init.lua
+  pterygota
+    .on_place,				mc
+    .on_timer_dark,			m
+    .on_timer_bright,			m
+    .register_deco,			m
+    .register_visible,			m
+    .register_hidden,			m
+    .register_pterygota,		m
+    .catch,				mc
+  callbacks
+    on_generated,			m
+
+## Rand ------------------------------------------------------------------------
+rand/init.lua
+  rand
+    .dy,				dc
+    .az,				dc
+    .xdy,				dc
+    .seq,				dc
+    .pick,				dc
+
+## Seats -----------------------------------------------------------------------
+seats/init.lua
+  seats
+    .attached,				ic
+    .attach,				m
+    .detach,				m
+    .detach_on,				m
+    .detach_all,			m
+    .force_detach,			m
+    .on_activate,			m
+    .on_rightclick,			m
+    .on_detach_child,			m
+  local
+    after_attach,			m
+    after_detach,			m
+    detach_on,				m
+  callbacks
+    on_leaveplayer,			m
+    on_shutdown,			m
+    on_dieplayer,			m
+
+## Screwdrivers ----------------------------------------------------------------
+screwdrivers/base_screwdrivers/init.lua
+  callbacks
+    on_use "Screwdriver",		mc
+    on_place "Screwdriver",		mc
+    on_place "Exzet",			mc
+    on_use "Exzet",			mc
+
+screwdrivers/screwdrivers_api/init.lua
+  screwdrivers
+    .check_attached_node,		dc
+    .handler,				mc
+    .exzet,				mc
+    .register_screwdriver,		m
+    .rotate
+      .facedir,				dc
+      .wallmounted,			dc
+  local
+    xzParam2,				dc
+
+## Sethome ---------------------------------------------------------------------
+sethome/init.lua
+  sethome
+    .set,				mc
+    .get,				dc
+    .go,				mc
+  command "home",			mc
+  command "sethome",			mc
+
+## sfInv -----------------------------------------------------------------------
+sfinv/base_inv/init.lua
+  callback
+    get,				dc
+
+sfinv/sfcraftguide/init.lua
+  sfcraftguide
+    .extract_groups,			ic
+    .item_has_groups,			ic
+    .groups_to_item,			dc
+    .get_craftable_recipes,		dc
+    .show_item,				ic
+    .is_fuel,				dc
+    .item_button_fs,			dc
+    .recipe_fs,				dc
+    .get_formspecs,			dc
+    .execute_search,			dc
+    .on_receive_fields,			dc
+  local
+    table_replace,			ic
+    cache_usages,			m
+    coords,				ic
+    imatch,				ic
+  callbacks
+    on_mods_loaded,			m
+    on_joinplayer,			m
+    on_leaveplayer,			m
+    page "sfcraftguide:craftguide"
+      get,				dc
+      on_player_receive_fields,		dc
+
+sfinv/sfinv_api/init.lua
+  sfinv
+    .register_page,			m
+    .override_page,			m
+    .get_nav_fs,			ic
+    .make_formspec,			dc
+    .get_formspec,			dc
+    .get_or_create_context,		mc
+    .set_context,			m
+    .set_player_inventory_formspec,	m
+    .set_page,				m
+    .get_page,				dc
+  callbacks
+    on_joinplayer,			m
+    on_leaveplayer,			m
+    on_player_receive_fields,		m
+
+sfinv/inv_utils/init.lua
+    .get_inventory_drops,		m
+
+## Signs -----------------------------------------------------------------------
+signs/signs_api/init.lua
+  signs
+    .on_construct,			m
+    .on_receive_fields,			m
+    .register_sign,			m
+
+## Sounds ----------------------------------------------------------------------
+sounds/sounds_api/init.lua
+  sounds
+    .register_defaults,			m
+    .get_defaults,			m
+
+## Spawn -----------------------------------------------------------------------
+spawn/init.lua 
+  local
+    next_pos,				mc
+    search,				mc
+    on_spawn,				mc
+  callbacks
+    on_respawnplayer,			mc
+
+## Stairs ----------------------------------------------------------------------
+stairs/stairs_api/init.lua
+  stairs
+    .rotate_and_place,			mc
+    .register_fuel,			m
+    .on_place_stair,			mc
+    .register_stair,			m
+    .on_place_slab,			mc
+    .register_slab,			m
+    .register_inner_stair,		m
+    .register_outer_stair,		m
+    .register_stair_and_slab,		m
+    .register_step,			m
+    .register_outer_step,		m
+    .register_inner_step,		m
+    .register_steps,			m
+    .register_steps_half,		m
+    .register_steps_slab,		m
+    .register_step_crafts,		m
+    .register_step_nodes,		m
+    .register_all,			m
+    .register_glass_stair_and_slab,	m
+    .register_glass_step_nodes,		m
+    .register_glass_all,		m
+  local
+    adapt_stair_images,			ic
+    adapt_slab_images,			ic
+    steps_craft,			m
+
+## Steel Bars ------------------------------------------------------------------
+
+## T4b -------------------------------------------------------------------------
+t4b/init.lua
+  t4b
+    .count,				ic
+
+## Tools -----------------------------------------------------------------------
+tools/tools_api/init.lua
+  tools
+    .register_pick,			m
+    .register_shovel,			m
+    .register_axe,			m
+    .register_sword,			m
+    .register_set,			m
+  local
+    set_capabilities,			ic
+    calc_capabilities,			ic
+
+## Trees -----------------------------------------------------------------------
+trees/base_bushes/init.lua
+  callbacks
+    grow_sapling "apple",		m
+    grow_sapling "acacia",		m
+    grow_sapling "pine",		m
+    on_timer "blueberry",		m
+    grow_sapling "blueberry",		m
+    after_dig_node "berries",		m
+
+trees/base_trees/extra.lua
+  callbacks
+    after_place_node "apple",		m
+    after_dig_node "apple",		m
+    on_timer "apple_mark",		m
+    grow_sapling "emergent_jungle",	m
+
+trees/cactus/init.lua
+  local
+    grow_cactus,			m
+    grow_large_cactus,			m
+  callbacks
+    on_place "large_seedling",		mc
+    on_construct "large_seedling",	m
+    on_timer "large_seedling",		m
+
+trees/base_trees/init.lua
+  callbacks
+    grow_sapling "apple",		m
+    grow_sapling "acacia",		m
+    grow_sapling "aspen",		m
+    grow_sapling "jungle",		m
+    grow_sapling "pine",		m
+    lbm "saplings_to_node_timer",	m
+
+trees/trees_api/init.lua
+  trees
+    .after_place_leaves,		m
+    .leafdecay_on_timer,		m
+    .leafdecay_after_destruct,		m
+    .can_grow,				dc
+    .sapling_on_place,			m
+    .register_tree_node,		m
+    .register_wood,			m
+    .register_leaves,			m
+    .register_sapling,			m
+    .register_tree_decoration,		m
+    .register_tree,			m
+    .register_bush_stem,		m
+    .register_bush_decoration,		m
+    .register_bush,			m
+  local
+    on_construct_sapling,		m
+    sapling_on_timer,			m
+
+## Vessels ---------------------------------------------------------------------
+vessels/vessels_api/init.lua
+  vessels
+    .register_bottle,			m
+    .register_glass,			m
+
+## Walls -----------------------------------------------------------------------
+walls/walls_api/init.lua
+  walls
+    .register_wall,			m
+
+## Weather ---------------------------------------------------------------------
+weather/init.lua
+  local
+    rangelim,				ic
+    update_clouds,			m
+    cyclic_update,			m
+  callbacks
+    on_joinplayer,			m
+
+## Wool ------------------------------------------------------------------------
+
+## xPanes ----------------------------------------------------------------------
+xpanes/xpanes_api/init.lua
+  xpanes
+    .connects_dir,			dc
+    .swap,				m
+    .update_pane,			m
+    .register_pane,			m
+  local
+    is_pane,				dc
+  callbacks
+    on_placenode,			m
+    on_dignode,				m
+  lbm "gen2",				m

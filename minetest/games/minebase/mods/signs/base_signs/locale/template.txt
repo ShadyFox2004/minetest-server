@@ -1,0 +1,3 @@
+# textdomain: base_signs
+Wooden Sign=
+Steel Sign=

@@ -1,0 +1,8 @@
+# textdomain: beds_api
+Leave Bed=Se lever du lit
+Good morning.=Bonjour.
+@1 of @2 players are in bed=@1 joueur(s) sur @2 sont au lit
+Force night skip=Forcer le passage de la nuit
+You can only sleep at night.=Vous ne pouvez dormir que la nuit.
+You have to stop moving before going to bed!=
+This bed is already occupied!=

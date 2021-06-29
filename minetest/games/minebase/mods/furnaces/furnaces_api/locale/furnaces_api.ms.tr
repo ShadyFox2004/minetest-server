@@ -1,0 +1,6 @@
+# textdomain: furnaces_api
+100% (output full)=100% (keluaran penuh)
+@1%=@1%
+Empty=Kosong
+Not cookable=Tidak boleh dimasak
+(Item: @1; Fuel: @2)=(Item: @1; Bahan api: @2)

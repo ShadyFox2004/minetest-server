@@ -1,0 +1,7 @@
+# textdomain: shelves
+Empty Bookshelf=空書架
+Bookshelf (@1 written, @2 empty books)=書架（@1本有字的書，@2本空書）
+Bookshelf=書架
+Vessels Shelf=容器架
+Empty Vessels Shelf=空容器架
+Vessels Shelf (@1 items)=容器架（@1項）

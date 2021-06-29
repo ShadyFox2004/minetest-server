@@ -1,0 +1,3 @@
+# textdomain: maps
+Mapping Kit=
+Use with 'Minimap' key=

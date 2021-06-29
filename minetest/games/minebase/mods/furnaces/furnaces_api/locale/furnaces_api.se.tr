@@ -1,0 +1,6 @@
+# textdomain: furnaces_api
+100% (output full)=100% (utgången full)
+@1%=@1%
+Empty=Tom
+Not cookable=Inte kokbar
+(Item: @1; Fuel: @2)=(Sak: @1; Bränsle: @2)

@@ -1,0 +1,3 @@
+# textdomain: mossy
+Permafrost with Moss=
+Mossy Cobblestone=

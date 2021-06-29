@@ -1,0 +1,4 @@
+# textdomain: shelves
+Empty Bookshelf=.i ti kunti ckukajna
+Bookshelf (@1 written, @2 empty books)=.i ti ckukajna to @1 cukta joi selci'a .ije @2 kunti cukta toi
+Bookshelf=lo ckukajna

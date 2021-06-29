@@ -1,0 +1,4 @@
+# textdomain: base_furnaces
+Furnace active=Forno laboras
+Furnace inactive=Forno ne laboras
+Furnace=Forno

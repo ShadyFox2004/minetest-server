@@ -1,0 +1,50 @@
+Mesecons Integration for Carts
+==============================
+
+This mod adds several types of rails for use with the existing carts from minetest_game:
+
+* Mesecons-Controlled Powered Rail
+-- When powered via mesecons, accelerates carts with the same power as a normal powered rail.
+-- When not powered, acts as a normal rail.
+
+* Mesecons-Controlled Brake Rail
+-- When powered via mesecons, decelerates carts with the same power as a normal brake rail.
+-- When not powered, acts as a normal rail.
+
+* Mesecons-Controlled Strong Powered Rail
+-- When powered via mesecons, accelerates carts with twice the power of a normal powered rail.
+-- When not powered, acts as a normal rail.
+
+* Mesecons-Controlled Strong Brake Rail
+-- When powered via mesecons, decelerates carts with twice the power of a normal brake rail.
+-- When not powered, acts as a normal rail.
+
+* Mesecons Detector Rail
+-- Allows carts to pass over like a normal rail.
+-- Emits a brief mesecons pulse whenever a cart passes over it.
+
+* Mesecons-Controlled Start-Stop Rail
+-- When not powered, causes any carts passing over it to come to an immediate stop.
+-- When powered via mesecons while the cart is still stopped on it, causes the cart to resume moving with its previous speed.
+-- If left powered, acts as a normal rail.
+
+* Mesecons Conducting Rail
+-- Acts as a normal rail (does not specially affect the cart) but conducts mesecons signals.
+
+* Digilines Controlled Rail (available only if digilines is installed)
+-- Sends a table on its set channel when passed over by a cart, including the following elements:
+---- pos: Exact position of the cart
+---- velocity: X and Z velocity of the cart
+---- driver: Name of the player inside the cart (nil if none)
+-- Responds to the following commands on its set channel:
+---- "grab": Stops a cart traveling over the rail, same as the start-stop rail. Only does anything if a cart is present when the command is issued.
+---- "release": Restarts a cart stopped via the "grab" command, causing it to resume moving with its previous speed.
+---- "power1" through "power15": Causes the rail to act as a powered rail. The power of a normal powered rail is 5.
+---- "brake1" through "brake15": Causes the rail to act as a brake rail. The power of a normal brake rail is 5.
+---- "idle" (also "power0" or "brake0"): Causes the rail to act as a normal rail, applying no power or braking force.
+
+* Digilines Conducting Rail (available only if digilines is installed)
+-- Acts as a normal rail (does not specially affect the cart) but conducts digilines signals.
+
+* Mesecons and Digilines Conducting Rail (available only if digilines is installed)
+-- Acts as a normal rail (does not specially affect the cart) but conducts both mesecons and digilines signals.

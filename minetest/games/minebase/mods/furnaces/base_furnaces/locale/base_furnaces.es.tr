@@ -1,0 +1,4 @@
+# textdomain: base_furnaces
+Furnace active=Horno activado
+Furnace inactive=Horno desactivado
+Furnace=Horno

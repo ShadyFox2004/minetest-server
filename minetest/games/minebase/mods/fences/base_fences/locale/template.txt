@@ -1,0 +1,16 @@
+# textdomain: base_fences
+Apple Wood Fence=
+Acacia Wood Fence=
+Jungle Wood Fence=
+Pine Wood Fence=
+Aspen Wood Fence=
+Apple Wood Fence Rail=
+Acacia Wood Fence Rail=
+Jungle Wood Fence Rail=
+Pine Wood Fence Rail=
+Aspen Wood Fence Rail=
+Apple Wood Fence Gate=
+Acacia Wood Fence Gate=
+Jungle Wood Fence Gate=
+Pine Wood Fence Gate=
+Aspen Wood Fence Gate=

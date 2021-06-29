@@ -1,0 +1,7 @@
+# textdomain: shelves
+Empty Bookshelf=
+Bookshelf (@1 written, @2 empty books)=
+Bookshelf=
+Empty Vessels Shelf=
+Vessels Shelf (@1 items)=
+Vessels Shelf=

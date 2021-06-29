@@ -1,0 +1,7 @@
+# textdomain: shelves
+Empty Bookshelf=Libreria vuota
+Bookshelf (@1 written, @2 empty books)=Libreria (@1 scritti, @2 vuoti)
+Bookshelf=Libreria
+Vessels Shelf=Scaffale per contenitori
+Empty Vessels Shelf=Scaffale per contenitori vuoto
+Vessels Shelf (@1 items)=Scaffale per contenitori (@1 oggetti)

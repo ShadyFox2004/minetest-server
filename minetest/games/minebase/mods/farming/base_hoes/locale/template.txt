@@ -1,0 +1,7 @@
+# textdomain: base_hoes
+Wooden Hoe=
+Stone Hoe=
+Steel Hoe=
+Bronze Hoe=
+Mese Hoe=
+Diamond Hoe=

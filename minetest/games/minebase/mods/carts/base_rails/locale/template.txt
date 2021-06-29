@@ -1,0 +1,4 @@
+# textdomain: base_rails
+Rail=
+Powered Rail=
+Brake Rail=

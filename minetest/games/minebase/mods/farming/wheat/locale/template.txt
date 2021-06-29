@@ -1,0 +1,6 @@
+# textdomain: wheat
+Straw=
+Wheat Seed=
+Wheat=
+Flour=
+Bread=

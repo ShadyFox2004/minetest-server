@@ -1,0 +1,4 @@
+# textdomain: fireflies
+Firefly=
+Hidden Firefly=
+Firefly in a Bottle=

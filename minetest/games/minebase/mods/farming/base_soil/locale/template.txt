@@ -1,0 +1,7 @@
+# textdomain: base_soil
+Soil=
+Wet Soil=
+Dry Soil=
+Wet Dry Soil=
+Desert Sand Soil=
+Wet Desert Sand Soil=

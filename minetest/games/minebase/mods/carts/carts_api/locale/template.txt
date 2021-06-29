@@ -1,0 +1,3 @@
+# textdomain: carts_api
+left-click push, right-click mount=
+aux + left-click take=

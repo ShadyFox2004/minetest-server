@@ -1,0 +1,7 @@
+# textdomain: base_soil
+Soil=Tanih
+Wet Soil=Tanih Lembap
+Dry Soil=Tanih Kering
+Wet Dry Soil=Tanih Kering Lembap
+Desert Sand Soil=Tanih Pasir Gurun
+Wet Desert Sand Soil=Tanih Pasir Gurun Lembap

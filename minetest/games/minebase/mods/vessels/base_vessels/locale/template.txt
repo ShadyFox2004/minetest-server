@@ -1,0 +1,4 @@
+# textdomain: base_vessels
+Empty Glass Bottle=
+Empty Drinking Glass=
+Empty Heavy Steel Bottle=

@@ -1,0 +1,6 @@
+# textdomain: base_screwdrivers
+Screwdriver=Schraubendreher
+left-click rotates face, right-click rotates axis=Linksklick dreht Seite, Rechtsklick dreht Achse
+Exzet=Exzet
+left-click push from left, right-click push from right=Linksklick schiebt von links, Rechtsklick schiebt von rechts
+aux + left-click pull to left, aux + right-click pull to right=aux + Linksklick zieht nach links, aux + Rechtsklick zieht nach rechts

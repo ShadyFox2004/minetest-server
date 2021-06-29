@@ -1,0 +1,7 @@
+# textdomain: base_soil
+Soil=Odlningsmark
+Wet Soil=Våt Odlningsmark
+Dry Soil=Torr Odlningsmark
+Wet Dry Soil=Våt Torr Odlningsmark
+Desert Sand Soil=Öken Sand Odlningsmark
+Wet Desert Sand Soil=Våt Öken Sand Odlningsmark

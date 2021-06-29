@@ -1,0 +1,4 @@
+# textdomain: base_fire
+Fire=
+Permanent Fire=
+Flint and Steel=

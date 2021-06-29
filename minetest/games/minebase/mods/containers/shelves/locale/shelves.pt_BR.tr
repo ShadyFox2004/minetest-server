@@ -1,0 +1,4 @@
+# textdomain: shelves
+Empty Bookshelf=Estante de Livros Vazia
+Bookshelf (@1 written, @2 empty books)=Estante de Livros (@1 livros escritos, @2 livros em branco)
+Bookshelf=Estante de Livros

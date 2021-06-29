@@ -1,0 +1,6 @@
+# textdomain: furnaces_api
+100% (output full)=100% (Výstup je plný)
+@1%=@1%
+Empty=Prázdne
+Not cookable=Nie je variteľné
+(Item: @1; Fuel: @2)=(Vec: @1; Palivo: @2)

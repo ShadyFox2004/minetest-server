@@ -1,0 +1,6 @@
+# textdomain: base_screwdrivers
+Screwdriver=
+left-click rotates face, right-click rotates axis=
+Exzet=
+left-click push from left, right-click push from right=
+aux + left-click pull to left, aux + right-click pull to right=

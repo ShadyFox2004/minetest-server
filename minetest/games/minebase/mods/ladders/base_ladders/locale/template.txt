@@ -1,0 +1,3 @@
+# textdomain: base_ladders
+Wooden Ladder=
+Steel Ladder=

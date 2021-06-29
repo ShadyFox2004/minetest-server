@@ -1,0 +1,25 @@
+# textdomain: base_tools
+Wooden Pickaxe=
+Stone Pickaxe=
+Bronze Pickaxe=
+Steel Pickaxe=
+Mese Pickaxe=
+Diamond Pickaxe=
+Wooden Shovel=
+Stone Shovel=
+Bronze Shovel=
+Steel Shovel=
+Mese Shovel=
+Diamond Shovel=
+Wooden Axe=
+Stone Axe=
+Bronze Axe=
+Steel Axe=
+Mese Axe=
+Diamond Axe=
+Wooden Sword=
+Stone Sword=
+Bronze Sword=
+Steel Sword=
+Mese Sword=
+Diamond Sword=

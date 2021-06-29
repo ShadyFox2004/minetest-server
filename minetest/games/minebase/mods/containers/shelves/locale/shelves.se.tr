@@ -1,0 +1,7 @@
+# textdomain: shelves
+Empty Bookshelf=Tom Bokhylla
+Bookshelf (@1 written, @2 empty books)=Bokhylla (@1 skriva, @2 tomma böcker)
+Bookshelf=Bokhylla
+Vessels Shelf=Fartygshylla
+Empty Vessels Shelf=Tom Fartygshylla
+Vessels Shelf (@1 items)=Fartygshylla (@1 saker)

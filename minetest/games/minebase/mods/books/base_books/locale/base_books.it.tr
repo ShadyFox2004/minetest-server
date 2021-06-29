@@ -1,0 +1,4 @@
+# textdomain: base_books
+Paper=Carta
+Book=Libro
+Book with Text=Libro con testo

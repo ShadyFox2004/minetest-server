@@ -1,0 +1,8 @@
+Resource Crops adds crops to to grow many materials, mainly focused on ores. 
+This mod also adds elements for crafting miscellaneous items and nodes.
+
+Made by TwigGlenn4
+
+Completely inspired by Mark719's Magical Crops mod.
+Some of the code is edited from PilzAdam's "FarmingPlus" mod.
+Textures are completely made by me, TwigGlenn4.

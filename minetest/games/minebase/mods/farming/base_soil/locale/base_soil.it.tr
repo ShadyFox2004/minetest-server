@@ -1,0 +1,7 @@
+# textdomain: base_soil
+Soil=Terreno
+Wet Soil=Terreno bagnato
+Dry Soil=Terreno asciutto
+Wet Dry Soil=Terreno asciutto bagnato
+Desert Sand Soil=Terreno di sabbia del deserto
+Wet Desert Sand Soil=Terreno bagnato di sabbia del deserto

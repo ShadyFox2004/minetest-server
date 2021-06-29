@@ -1,0 +1,4 @@
+# textdomain: base_furnaces
+Furnace active=Печь зажжена
+Furnace inactive=Печь не зажжена
+Furnace=Печь

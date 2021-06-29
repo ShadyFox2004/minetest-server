@@ -1,0 +1,4 @@
+# textdomain: base_furnaces
+Furnace active=
+Furnace inactive=
+Furnace=

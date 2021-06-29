@@ -1,0 +1,6 @@
+# textdomain: furnaces_api
+100% (output full)=100% (saída cheia)
+@1%=@1%
+Empty=Vazio
+Not cookable=Não pode cozinhar
+(Item: @1; Fuel: @2)=(Item: @1; Combustível: @2)

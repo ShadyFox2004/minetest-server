@@ -1,0 +1,3 @@
+# textdomain: glass_xpanes
+Glass Pane=
+Obsidian Glass Pane=

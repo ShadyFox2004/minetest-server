@@ -1,0 +1,7 @@
+# textdomain: base_soil
+Soil=Sol
+Wet Soil=Sol humide
+Dry Soil=Sol sec
+Wet Dry Soil=Sol sec et humide
+Desert Sand Soil=Sol de sable du désert
+Wet Desert Sand Soil=Sol de sable du désert humide
