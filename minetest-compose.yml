@@ -1,0 +1,15 @@
+version: "2.1"
+services:
+  minetest:
+    image: ghcr.io/linuxserver/minetest
+    container_name: minetest
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+      - CLI_ARGS="--gameid minetest" #optional
+    volumes:
+      - ${HOME}/config/.minetest
+    ports:
+      - 30000:30000/udp
+    restart: unless-stopped
